@@ -1,0 +1,138 @@
+/* Resetando as margens e preenchimentos padrões e ajustando o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garantindo que o HTML e o corpo ocupem 100% da altura da janela */
+html, body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+/* Definindo o estilo do fundo do corpo, com posicionamento central e sem repetição de imagem */
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Definindo o layout principal do container, com flexbox para alinha os itens ao início */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 0 auto;
+    border: 2px solid green;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Estilizando a coluna dentro do container com alinhamento central e layout em coluna */
+.coluna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+    height: 100%;
+    width: 80%;
+}
+
+/* Estilizando os botões com gradiente, sombras e bordas arredondadas */
+button {
+    display: block;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #5dd567, #FF96FF);
+    color: #ffffff;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-family: 'Roboto', 'sans-serif';
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px #E2D283;
+}
+
+/* Mudando o estilo do botão ao passar o mouse sobre ele */
+button:hover {
+    background: linear-gradient(45deg, #2f8703, #a507a5);
+}
+
+/* Estilizando o título h1 com fontes fantasiosas, sombras e centralização */
+h1 {
+    text-align: center;
+    font-family: 'Jokerman', fantasy;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #2f8703, 1px -1px 0 #2f8703, -1px 1px 0 #2f8703, 1px 1px 0 #2f8703;
+    font-size: 30px;
+}
+
+/* Media queries para dispositivos pequenos (retrato) */
+@media (min-width: 320px) and (max-width: 1023px) and (orientation: portrait) {
+    /* Centralizando o container e a coluna no modo retrato */
+    .container {
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .coluna {
+        width: 80%;
+        justify-content: center;
+    }
+    /* Ajustando o tamanho dos botões para telas menores */
+    button {
+        width: 5rem;
+        height: 1.6rem;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    /* Definindo a imagem de fundo específica para o modo retrato */
+    body {
+        background-image: url('/storage/262F-130A/Download/exercícios/Aula vetores/Echidna Móvel Retrato.jpg');
+    }
+}
+
+/* Media queries para dispositivos no modo paisagem */
+@media (orientation: landscape) {
+    /* Alinhando o container ao início no modo paisagem */
+    .container {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    /* Definindo a imagem de fundo específica para o modo paisagem */
+    body {
+        background-image: url('/storage/262F-130A/Download/exercícios/Aula vetores/Echidna Desktop.png');
+        background-color: #554756;
+        background-size: contain;
+        background-position: right;
+    }
+    /* Ajustando o tamanho dos botões para o modo paisagem */
+    button {
+        width: 6rem;
+        height: 2.0rem;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+/* Media queries para dispositivos maiores, como desktops */
+@media (min-width: 1024px) {
+    /* Ajustando a largura da coluna para telas grandes */
+    .coluna {
+        width: 30%;
+    }
+    /* Ajustando o tamanho dos botões para telas maiores */
+    button {
+        width: 10rem;
+        height: 4rem;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    /* Definindo a imagem de fundo específica para telas grandes */
+    body {
+        background-image: url('/storage/262F-130A/Download/exercícios/Aula vetores/Echidna Desktop.png');
+        background-color: #554756;
+        background-size: contain;
+        background-position: right;
+    }
+}
