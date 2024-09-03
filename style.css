@@ -16,6 +16,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    flex: none;
+    flex-shrink: 1;
 }
 
 /* Definindo o layout principal do container, com flexbox para alinha os itens ao início */
@@ -24,7 +26,7 @@ body {
     justify-content: flex-start;
     padding: 0px;
     margin: 0 auto;
-    border: 2px solid green;
+    border: none;
     width: 100%;
     height: 100vh;
 }
@@ -34,37 +36,47 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border: 2px solid green;
+    align-items:  center;
+    border: none;
     height: 100%;
     width: 80%;
 }
 
 /* Estilizando os botões com gradiente, sombras e bordas arredondadas */
 button {
-    display: block;
-    margin-bottom: 10px;
-    background: linear-gradient(45deg, #5dd567, #FF96FF);
-    color: #ffffff;
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-    font-family: 'Roboto', 'sans-serif';
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 0 6px 10px #E2D283;
-}
+        display: block;
+        margin-bottom: 10px;
+        background: linear-gradient(45deg, #5dd567, #ffffff);
+        color: white;
+        font-family: 'Roboto', 'sans-serif';
+        font-weight: bold;
+        border: transparent;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px #5dd567;
+        text-shadow:
+            -0.5px -0.5px 0 #2f8703,
+            0.5px -0.5px 0 #2f8703,
+            -0.5px 0.5px 0 #2f8703,
+            0.5px 0.5px 0 #2f8703;
+    }
 
 /* Mudando o estilo do botão ao passar o mouse sobre ele */
 button:hover {
-    background: linear-gradient(45deg, #2f8703, #a507a5);
+    background: linear-gradient(45deg, #2f8703, #ffffff);
 }
 
 /* Estilizando o título h1 com fontes fantasiosas, sombras e centralização */
 h1 {
     text-align: center;
-    font-family: 'Jokerman', fantasy;
+    font-family: 'Roboto', cursive;
     color: #ffffff;
-    text-shadow: -1px -1px 0 #2f8703, 1px -1px 0 #2f8703, -1px 1px 0 #2f8703, 1px 1px 0 #2f8703;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 900px;
+    text-shadow:
+        -1px -1px 20px rgba(93, 213, 103),
+        1px -1px 20px rgba(93, 213, 103),
+        -1px 1px 20px rgba(93, 213, 103),
+        1px 1px 20px rgba(93, 213, 103);
 }
 
 /* Media queries para dispositivos pequenos (retrato) */
@@ -77,18 +89,24 @@ h1 {
     }
     .coluna {
         width: 80%;
-        justify-content: center;
+        justify-content: end;
+        padding-bottom: 2rem
     }
     /* Ajustando o tamanho dos botões para telas menores */
     button {
-        width: 5rem;
-        height: 1.6rem;
-        font-size: 0.7rem;
+        width: 9rem;
+        height: 3.2rem;
+        font-size: 1.3rem;
         padding: 0.3rem 0.6rem;
+        margin-bottom: 1rem;
     }
+    h1 {
+    margin-bottom: 1rem;
+         font-size: 40px;
+}
     /* Definindo a imagem de fundo específica para o modo retrato */
     body {
-        background-image: url('/storage/262F-130A/Download/exercícios/Aula vetores/Echidna Móvel Retrato.jpg');
+        background-image: url('Echidna Móvel Retrato.jpg');
     }
 }
 
@@ -101,7 +119,7 @@ h1 {
     }
     /* Definindo a imagem de fundo específica para o modo paisagem */
     body {
-        background-image: url('/storage/262F-130A/Download/exercícios/Aula vetores/Echidna Desktop.png');
+        background-image: url('Echidna Desktop.png');
         background-color: #554756;
         background-size: contain;
         background-position: right;
@@ -119,20 +137,28 @@ h1 {
 @media (min-width: 1024px) {
     /* Ajustando a largura da coluna para telas grandes */
     .coluna {
-        width: 30%;
+        width: 75%;
+        justify-content: right;
     }
     /* Ajustando o tamanho dos botões para telas maiores */
     button {
-        width: 10rem;
-        height: 4rem;
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+        width: 13rem;
+        height: 6rem;
+        font-size: 2rem;
+        padding: 1rem 1.3rem;
+        margin-top: 1.6rem;
     }
     /* Definindo a imagem de fundo específica para telas grandes */
     body {
-        background-image: url('/storage/262F-130A/Download/exercícios/Aula vetores/Echidna Desktop.png');
+        background-image: url('Echidna Desktop.png');
         background-color: #554756;
         background-size: contain;
         background-position: right;
+        
+    }
+    h1 {
+        text-shadow: -1px -1px 0 #ecffd7, 1px -1px 0 #ecffd7, -1px 1px 0 #ecffd7, 1px 1px 0 #ecffd7;
+        font-size: 100px;
+        margin-top: 3rem;
     }
 }

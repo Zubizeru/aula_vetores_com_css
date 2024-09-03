@@ -2,7 +2,7 @@ function executarExercicio2() {
     /* Crie um algoritmo que leia 4 notas, mostre as notas e a média na tela. */
     let nota = [];
     let soma = 0;
-    let mensagem = "Notas: "; 
+    let mensagem = "Notas: ";
 
     // Leitura das notas
     for (let i = 0; i < 4; i++) {                                  //Esse loop é define a quantidade de notas pedidas ao usuário.
@@ -14,7 +14,7 @@ function executarExercicio2() {
 
     // Construção da mensagem 
     for (let i = 0; i < 4; i++) {               // Formata as notas que o usuário colocou.
-        mensagem += `${i+1}° nota: ${nota[i]}`; //Exibe as notas em uma string para serem apresentadas ao usuário na frente da string da mensagem.
+        mensagem += `${i + 1}° nota: ${nota[i]}`; //Exibe as notas em uma string para serem apresentadas ao usuário na frente da string da mensagem.
         if (i === nota.length - 1) {            //Se for a ultima iteração.
             mensagem += ".";                    //Vai colocar ponto.
         } else {                                //Se não for a ultima iteração.
