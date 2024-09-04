@@ -2,7 +2,7 @@ function executarExercicio1() {
     // Crie um algoritmo que leia um vetor de 5 números inteiros e mostre-os.
     let num = [];
     let mensagem = "";
-    
+
     // Leitura dos números nos espaços
     for (let i = 0; i < 5; i++) {              // Esse loop define quantos números vão ser pedidos ao usuario
         num.push(prompt("Informe um número:"));// Os números são pedidos e puxados ao array num
