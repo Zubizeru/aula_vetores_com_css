@@ -23,10 +23,6 @@ function executarExercicio4() {
     }
 
     alert(mensagem);
-
-
-
-
-
-
 }
+
+
