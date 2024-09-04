@@ -23,7 +23,7 @@ function executarExercicio3() {
     }
 
     mensagem += `Foram lidas ${consoantes.length} consoantes! \n`;  //A mensagem final; 
-    
+
     // Verificação de ponto e vírgula;
     for (let index = 0; index < consoantes.length; index++) { // Verifica as letras no vetor consoante;
 
@@ -41,3 +41,4 @@ function executarExercicio3() {
     alert(mensagem);
 
 }
+
