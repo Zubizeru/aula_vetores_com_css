@@ -1,0 +1,110 @@
+/* Media queries para dispositivos pequenos em modo retrato */
+@media (min-width: 320px) and (max-width: 1023px) and (orientation: portrait) {
+  
+  .topo {
+    flex: 1.2;
+  }
+  .coluna {
+    width: 100%;
+    justify-content: end;
+    padding-bottom: 0;
+    flex: 1;
+    }
+  .linha {
+    padding: 20px;
+    min-height: 100%;
+  }
+  body {
+    background-image: url('Echidna Móvel Retrato.jpg');
+    background-position: center;
+  }
+  button {
+    width: 9rem;
+    height: 3.2rem;
+    font-size: 1.3rem;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  
+}
+
+/* Media queries para dispositivos no modo paisagem */
+@media (orientation: landscape) {
+  .container {
+    justify-content: flex-start;
+    width: 70%;
+    margin-left: 40px;
+  }
+  .topo {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    flex: 1;
+  }
+  .coluna {
+    flex: 3;
+  }
+  .linha {
+    padding: 5px;
+  }
+  body {
+    background-image: url('Echidna Desktop.jpg');
+    background-color: #554756;
+    background-size: contain;
+    background-position: right;
+  }
+  button {
+    width: 10rem;
+    height: 2.6rem;
+    font-size: 1rem;
+    margin: 10px auto;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+/* Media queries para dispositivos maiores, como desktops */
+@media (min-width: 1024px) {
+  .container {
+    justify-content: flex-start;
+    width: 70%;
+    margin-left: 40px;
+  }
+  .topo {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    flex: 0.5;
+  }
+  .coluna {
+    flex: 5;
+  }
+  .linha {
+    padding: 5px;
+  }
+  body {
+    background-image: url('Echidna Desktop.jpg');
+    background-color: #554756;
+    background-size: contain;
+    background-position: right;
+  }
+  button {
+    width: 15rem;
+    height: 7rem;
+    font-size: 2rem;
+    padding: 1rem 1.3rem;
+    margin-top: 1.6rem;
+  }
+  h1 {
+    text-shadow: -1px -1px 15px rgba(236, 255, 215, 0.6), 1px -1px 15px rgba(236, 255, 215, 0.6), -1px 1px 15px rgba(236, 255, 215, 0.6), 1px 1px 15px rgba(236, 255, 215, 0.6);
+    font-size: 90px;
+    margin-top: 3rem;
+  }
+}
+
