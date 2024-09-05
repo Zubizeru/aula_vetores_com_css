@@ -68,19 +68,55 @@ button {
     0.5px 0.5px 0 #2f8703;
 }
 
+.btnroxo {
+  background: linear-gradient(45deg, #8A2BE2, #ffffff);
+  box-shadow: 0px 0px 15px #28103C;
+  text-shadow:
+    -0.5px -0.5px 0 #28103C,
+    0.5px -0.5px 0 #28103C,
+    -0.5px 0.5px 0 #28103C,
+    0.5px 0.5px 0 #28103C;
+}
+
+.btnroxo:hover {
+  background: linear-gradient(45deg, #2A084A, #ffffff); /* Muda a cor no hover */
+}
+
 button:hover {
   background: linear-gradient(45deg, #1c4d03, #ffffff);
 }
 
+/* Fazendo o titulo de re:zero*/
+.aula {
+            color: #8A2BE2; /* Cor roxa similar à usada em Re:Zero */
+  letter-spacing: -5px;
+  margin-right: -10px;
+        }
+.maiusculo {
+  margin-right:-10px;
+}
+
+.vetores  {
+            color: #000000; /* Cor preta */
+  letter-spacing: -5px;
+  font-family: 'Times New Roman', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+        }
+.raise {
+            position: relative;
+            bottom: 7px; /* Ajuste o valor para alinhar conforme necessário */
+            letter-spacing: -5px;
+  margin-left: -15px;
+  margin-right: -15px;
+        }
+
 h1 {
   text-align: center;
-  font-family: 'Roboto', cursive;
-  color: #ffffff;
-  font-size: 40px;
-  font-weight: 900;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
   text-shadow:
-    -1px -1px 35px rgba(172, 67, 214, 0.6),
-    1px -1px 35px rgba(172, 67, 214, 0.6),
-    -1px 1px 35px rgba(172, 67, 214, 0.6),
-    1px 1px 35px rgba(172, 67, 214, 0.6);
+    0px 0px 8px rgba(255, 255, 255, 0.6),  /* Sombra central suave branca */
+    0px 0px 16px rgba(255, 255, 255, 0.4), /* Sombra mais larga e difusa branca */
+    0px 0px 32px rgba(255, 255, 255, 0.2); /* Sombra ainda mais ampla branca */
 }

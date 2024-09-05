@@ -1,9 +1,10 @@
-     /* Crie um algoritmo que leia 20 números inteiros e armazene-os num 
+function executarExercicio5() {
+    /* Crie um algoritmo que leia 20 números inteiros e armazene-os num 
 vetor. Armazene os números pares no vetor PAR e os números IMPARES 
 no vetor impar. Deve-se no final mostrar os três vetores. */
-function executarExercicio5() {
-    let impar = [];
+
     let numero = [];
+    let impar = [];
     let par = [];
     let mensagem = "Números informados:\n";
 
