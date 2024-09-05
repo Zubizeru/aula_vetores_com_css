@@ -8,8 +8,8 @@ function executarExercicio4() {
 
     // Leitura das notas
     for (let i = 0; i < 5; i++) {
-        salario.push(prompt(`Informe o ${i + 1}ª salário:`));
-        cal[i] = parseFloat(salario[i] - (salario[i] * 12 / 100))
+        salario.push(parseFloat(prompt(`Informe o ${i + 1}ª salário:`)));
+        cal[i] = (salario[i] - (salario[i] * 12 / 100))
     }
 
     // Construção da mensagem 

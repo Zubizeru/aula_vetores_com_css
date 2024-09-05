@@ -79,8 +79,8 @@ h1 {
   font-size: 40px;
   font-weight: 900;
   text-shadow:
-    -1px -1px 35px rgba(236, 255, 215, 0.6),
-    1px -1px 35px rgba(236, 255, 215, 0.6),
-    -1px 1px 35px rgba(236, 255, 215, 0.6),
-    1px 1px 35px rgba(236, 255, 215, 0.6);
+    -1px -1px 35px rgba(172, 67, 214, 0.6),
+    1px -1px 35px rgba(172, 67, 214, 0.6),
+    -1px 1px 35px rgba(172, 67, 214, 0.6),
+    1px 1px 35px rgba(172, 67, 214, 0.6);
 }
