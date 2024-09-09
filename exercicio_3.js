@@ -9,6 +9,17 @@ function executarExercicio3() {
         letras.push(val.toLowerCase()); // Puxa para o vetor letras e deixa as letras no diminutivo;
     }
 
+    mensagem += `Você colocou ${letras.length} números: \n`;  //A mensagem final; 
+
+    for (let i = 0; i < letras.length; i++) { // Verifica as letras no vetor consoante;
+
+        if (i === (letras.length - 1)) {  //Se for a ultima iteração...
+            mensagem += letras[i] + ".";  //Vai colocar ponto depois do consoantes;
+        } else {                                  //Se não for a ultima iteração...
+            mensagem += letras[i] + ", "; //Vai colocar virgula e espaço depois do consoantes.
+        }
+    }
+
     for (let i = 0; i < letras.length; i++) { // Verifica as letras que o usuário colocou; 
         if (!(letras[i] == 'a' ||            //Se o letra não uma vogal...
             letras[i] == 'e' ||              //...
@@ -19,14 +30,14 @@ function executarExercicio3() {
         }
     }
 
-    mensagem += `Foram lidas ${consoantes.length} consoantes! \n`;  //A mensagem final; 
+    mensagem += `\n Foram lidas ${consoantes.length} consoantes: \n`;  //A mensagem final; 
 
-    for (let index = 0; index < consoantes.length; index++) { // Verifica as letras no vetor consoante;
+    for (let j = 0; j < consoantes.length; j++) { // Verifica as letras no vetor consoante;
 
-        if (index === (consoantes.length - 1)) {  //Se for a ultima iteração...
-            mensagem += consoantes[index] + ".";  //Vai colocar ponto depois do consoantes;
+        if (j === (consoantes.length - 1)) {  //Se for a ultima iteração...
+            mensagem += consoantes[j] + ".";  //Vai colocar ponto depois do consoantes;
         } else {                                  //Se não for a ultima iteração...
-            mensagem += consoantes[index] + ", "; //Vai colocar virgula e espaço depois do consoantes.
+            mensagem += consoantes[j] + ", "; //Vai colocar virgula e espaço depois do consoantes.
         }
     }
 
