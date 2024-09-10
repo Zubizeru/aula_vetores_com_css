@@ -6,22 +6,14 @@ no vetor impar. Deve-se no final mostrar os três vetores. */
     let numero = [];
     let impar = [];
     let par = [];
-    let mensagem = "Números informados:\n";
+    let mensagem = "";
 
     // Leitura dos números
     for (let i = 0; i < 20; i++) {
         numero.push(parseInt(prompt(`Informe o ${i + 1}º número:`)));
     }
-
-    // Verificação de par ou ímpar e construção da mensagem de números informados
+    // Verificação de par ou ímpar.
     for (let i = 0; i < numero.length; i++) {
-        mensagem += numero[i];
-
-        if (i === numero.length - 1) {
-            mensagem += ".";
-        } else {
-            mensagem += ", ";
-        }
 
         if (numero[i] % 2 === 0) {   // Verifica se o número é par
             par.push(numero[i]);
@@ -29,28 +21,44 @@ no vetor impar. Deve-se no final mostrar os três vetores. */
             impar.push(numero[i]);
         }
     }
+    // Construção da mensagem de números informados.
+    mensagem += "Números informados:\n";
+    for (let i = 0; i < numero.length; i++) {
+
+        if (i === numero.length - 1) {
+            mensagem += `${numero[i]}.`;
+        } else if (i === numero.length - 2) {
+            mensagem += `${numero[i]} e `;
+        } else {
+            mensagem += `${numero[i]}, `;
+        }
+    }
 
     // Construção da mensagem de números pares
     mensagem += "\nNúmeros pares:\n";
     for (let i = 0; i < par.length; i++) {
-        mensagem += par[i];
+        mensagem += "";
 
         if (i === par.length - 1) {
-            mensagem += ".";
+            mensagem += `${par[i]}.`;
+        } else if (i === par.length - 2) {
+            mensagem += `${par[i]} e `;
         } else {
-            mensagem += ", ";
+            mensagem += `${par[i]}, `;
         }
     }
 
     // Construção da mensagem de números ímpares
     mensagem += "\nNúmeros ímpares:\n";
     for (let i = 0; i < impar.length; i++) {
-        mensagem += impar[i];
+        mensagem += "";
 
         if (i === impar.length - 1) {
-            mensagem += ".";
+            mensagem += `${impar[i]}.`;
+        } else if (i === impar.length - 2) {
+            mensagem += `${impar[i]} e `;
         } else {
-            mensagem += ", ";
+            mensagem += `${impar[i]}, `;
         }
     }
 
