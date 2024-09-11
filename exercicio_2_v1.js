@@ -1,5 +1,5 @@
+// Crie um algoritmo que leia 4 notas, mostre as notas e a média na tela.
 function executarExercicio2_v1() {
-    // Crie um algoritmo que leia 4 notas, mostre as notas e a média na tela.
     const nota = lerNota(4);
     const media = calcularMedia(nota);
     const mensagem = construirMensagem2(nota, media);

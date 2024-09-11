@@ -1,5 +1,5 @@
+// Crie um algoritmo que leia um vetor de 5 números inteiros e mostre-os.  
 function executarExercicio1() {
-    // Crie um algoritmo que leia um vetor de 5 números inteiros e mostre-os.  
     let num = [];
     let mensagem = "";
 

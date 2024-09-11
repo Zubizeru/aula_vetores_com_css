@@ -1,5 +1,5 @@
+// Crie um algoritmo que leia 4 notas, mostre as notas e a média na tela.
 function executarExercicio2() {
-    // Crie um algoritmo que leia 4 notas, mostre as notas e a média na tela.
     let nota = [];
     let soma = 0;
     let mensagem = "Notas: ";

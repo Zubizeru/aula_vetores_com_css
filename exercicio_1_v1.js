@@ -1,7 +1,5 @@
-
-
+// Crie um algoritmo que leia um vetor de 5 números inteiros e mostre-os.
 function executarExercicio1_v1() {
-    // Crie um algoritmo que leia um vetor de 5 números inteiros e mostre-os.
     const numeros = lerNumeros(5);   // Chama a função para ler os números, o 5 é o parametro quantidade
     const mensagem = construirMensagem1(numeros); // Chama a função para construir a mensagem com os números
     exibirMensagem1(mensagem);        // Chama a função para exibir a mensagem
