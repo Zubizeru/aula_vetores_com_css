@@ -1,41 +1,48 @@
 // Crie um algoritmo que leia 4 notas, mostre as notas e a média na tela.
+// Função principal que executa o exercício de cálculo de média de notas
 function executarExercicio2_v1() {
-    const nota = lerNota(4);
-    const media = calcularMedia(nota);
-    const mensagem = construirMensagem2(nota, media);
-    exibirMensagem2(mensagem);
+    const notas = lerNotas(4);                     // Lê as notas informadas pelo usuário
+    const media = calcularMedia(notas);             // Calcula a média das notas
+    exibirNotaseMedia(notas, media);                // Constrói e exibe a mensagem final com notas e média
 }
 
-function lerNota(quantidade) {
-    let nota = [];
+// Função para capturar as notas do usuário
+function lerNotas(quantidade) {
+    let notas = [];
     for (let i = 0; i < quantidade; i++) {
-        nota.push(parseFloat(prompt(`Informe a ${i + 1}ª nota:`)));
+        let nota;
+        do {
+            nota = parseFloat(prompt(`Informe a ${i + 1}ª nota:`));
+        } while (isNaN(nota)); // Repetir até que o usuário insira um número válido
+        notas.push(nota); // Adiciona a nota ao array
     }
-    return nota;
+    return notas; // Retorna o array com as notas informadas
 }
 
-function calcularMedia(nota) {
+// Função que calcula a média de um array de notas
+function calcularMedia(notas) {
     let soma = 0;
-    for (let i = 0; i < nota.length; i++) {
-        soma += nota[i];
+    for (let i = 0; i < notas.length; i++) {
+        soma += notas[i]; // Soma todas as notas
     }
-    return soma / nota.length;
+    return soma / notas.length; // Retorna a média
 }
 
-function construirMensagem2(nota, media) {
+// Função para construir e exibir a mensagem de exibição com as notas e a média
+function exibirNotaseMedia(notas, media) {
     let mensagem = "Notas: ";
-    for (let i = 0; i < nota.length; i++) {
-        mensagem += `${i + 1}ª nota: ${nota[i].toFixed(2)}`;
-        if (i === nota.length - 1) {
-            mensagem += ".";
+
+    for (let i = 0; i < notas.length; i++) {
+        mensagem += `${i + 1}ª nota: ${notas[i].toFixed(2)}`; // Adiciona cada nota à mensagem com 2 casas decimais
+
+        // Condições para adicionar ponto ou vírgula entre as notas
+        if (i === notas.length - 1) {
+            mensagem += "."; // Última nota, adiciona ponto final
         } else {
-            mensagem += ", ";
+            mensagem += ", "; // Adiciona vírgula e espaço entre as notas
         }
     }
-    mensagem += `\nMédia: ${media.toFixed(2)}`;
-    return mensagem;
-}
 
-function exibirMensagem2(mensagem) {
-    alert(mensagem);
-}
+    mensagem += `\nMédia: ${media.toFixed(2)}`; // Adiciona a média à mensagem
+
+    alert(mensagem); 
