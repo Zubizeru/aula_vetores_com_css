@@ -1,50 +1,50 @@
 // Crie um algoritmo que leia um vetor de 10 letras, e diga quantas consoantes foram lidas e mostre essas consoantes.
 function executarExercicio3_v1() {
-
-    const letras = lerLetras(10);                    // Chama a função para ler 10 letras
-    const consoantes = separarConsoantes(letras);           // Calcula a média das notas
-    const mensagem = construirMensagem3(consoantes); // Chama a função para construir a mensagem com as notas e a média
-    exibirMensagem3(mensagem);                     // Exibe a mensagem final
+    // Função principal que executa o exercício
+    const letras = lerLetras(10);                    // Chama a função para ler as letras
+    const consoantes = separarConsoantes(letras);    // Separa as consoantes das letras
+    exibirConsoantes(consoantes);   // Constrói a mensagem com as consoantes
 }
 
 function lerLetras(quantidade) {
     let letras = [];
+    let letra;
     for (let i = 0; i < quantidade; i++) {
-        letras.push(prompt(`Informe a ${i + 1}ª letra:`).toLowerCase()); // Lê e armazena os valores no array `notas`
+        {
+            letra = prompt(`Informe a ${i + 1}ª letra (somente uma letra):`).toUpperCase();
+        }
+        letras.push(letra); // Adiciona a letra ao array
     }
     return letras;
 }
 
 function separarConsoantes(letras) {
     let consoantes = [];
-    let mensagem = "";
-    for (let i = 0; i < letras.length; i++) { // Verifica as letras que o usuário colocou; 
-        if (!(letras[i] == 'a' ||            //Se o letra não uma vogal...
-            letras[i] == 'e' ||              //...
-            letras[i] == 'i' ||              //...
-            letras[i] == 'o' ||              //...
-            letras[i] == 'u')) {             //...
-            consoantes.push(letras[i]);      //puxa para o vetor consoante.
+    for (let i = 0; i < letras.length; i++) {
+        if (!(letras[i] === 'A' ||
+        letras[i] === 'E' ||
+        letras[i] === 'I' ||
+        letras[i] === 'O' ||
+        letras[i] === 'U')) {
+            consoantes.push(letras[i]); // Adiciona a letra ao array de consoantes
         }
     }
     return consoantes;
 }
 
-function construirMensagem3(consoantes) {
-    let mensagem = ``;
-    mensagem += `Foram lidas ${consoantes.length} consoantes! \n`;  //A mensagem final; 
+function exibirConsoantes(consoantes) {
+    let mensagem = `Foram lidas ${consoantes.length} consoantes!\n`;
 
-    for (let index = 0; index < consoantes.length; index++) { // Verifica as letras no vetor consoante;
-
-        if (index === (consoantes.length - 1)) {  //Se for a ultima iteração...
-            mensagem += consoantes[index] + ".";  //Vai colocar ponto depois do consoantes;
-        } else {                                  //Se não for a ultima iteração...
-            mensagem += consoantes[index] + ", "; //Vai colocar virgula e espaço depois do consoantes.
+    for (let i = 0; i < consoantes.length; i++) {
+        mensagem += consoantes[i];
+        if (i === consoantes.length - 1) {
+            mensagem += "."; // Adiciona ponto no final da última consoante
+        } else if (i === consoantes.length - 2) {
+            mensagem += " e "; // Adiciona "e" entre os dois últimos números
+        } else {
+            mensagem += ", "; // Adiciona vírgula e espaço entre as consoantes
         }
     }
-    return mensagem;
-}
 
-function exibirMensagem3(mensagem) {
-    alert(mensagem);
+    alert(mensagem); // Exibe a mensagem ao usuário diretamente no alert
 }
