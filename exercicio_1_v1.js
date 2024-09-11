@@ -1,30 +1,35 @@
 // Crie um algoritmo que leia um vetor de 5 números inteiros e mostre-os.
+// Função principal que executa o programa ao clicar no botão
 function executarExercicio1_v1() {
-    const numeros = lerNumeros(5);   // Chama a função para ler os números, o 5 é o parametro quantidade
-    const mensagem = construirMensagem1(numeros); // Chama a função para construir a mensagem com os números
-    exibirMensagem1(mensagem);        // Chama a função para exibir a mensagem
+  let numeros = lerNumeros1(5); // Passa o número de entradas para a função
+  exibirNumeros1(numeros);
 }
 
-function lerNumeros(quantidade) {
-    let numeros = [];
-    for (let i = 0; i < quantidade; i++) {
-        numeros.push(parseInt(prompt("Informe um número:")));
+// Função para capturar os números do usuário
+function lerNumeros1(qtd) { // Aceita o número de entradas como argumento
+  let numeros = [];
+  for (let i = 0; i < qtd; i++) {
+    let numero;
+    do {
+      numero = parseInt(prompt(`Digite o ${i + 1}° número inteiro:`));
+    } while (isNaN(numero)); // Repetir até que o usuário insira um número válido
+    numeros.push(numero);
+  }
+  return numeros; // Certifica-se de retornar o array corretamente
+}
+
+// Função para exibir os números armazenados
+function exibirNumeros1(numeros) {
+  let mensagem = "Os números digitados foram:\n";
+  for (let i = 0; i < numeros.length; i++) {
+    mensagem += numeros[i];
+    if (i === numeros.length - 1) {
+      mensagem += "."; // Adiciona ponto no final
+    } else if (i === numeros.length - 2) {
+      mensagem += " e "; // Adiciona "e" entre os dois últimos números
+    } else {
+      mensagem += ", "; // Adiciona vírgula e espaço entre os números
     }
-    return numeros;
-}
-
-function construirMensagem1(numeros) {
-    let mensagem = "";
-    for (let i = 0; i < numeros.length; i++) {
-        if (i === numeros.length - 1) {
-            mensagem += `${numeros[i]}.`;
-        } else {
-            mensagem += `${numeros[i]}, `;
-        }
-    }
-    return mensagem;
-}
-
-function exibirMensagem1(mensagem) {
-    alert(mensagem);
+  }
+  alert(mensagem);
 }
